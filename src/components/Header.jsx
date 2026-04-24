@@ -10,7 +10,7 @@ export default function Header({ cartProducts }) {
         data-bs-theme="dark"
       >
         <div className="container d-flex align-items-center">
-          <a href="#" className="navbar-brand">
+          <a className="navbar-brand" onClick={() => navigate("/")}>
             Movie App
           </a>
 
