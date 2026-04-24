@@ -1,4 +1,8 @@
+import { useNavigate } from "react-router-dom";
+
 export default function Header({ cartProducts }) {
+  const navigate = useNavigate();
+
   return (
     <div id="header">
       <nav
@@ -24,8 +28,10 @@ export default function Header({ cartProducts }) {
           <button
             type="button"
             className="btn btn-outline-light position-relative"
+            onClick={() => navigate("/cart")}
           >
             <i className="bi bi-cart"></i>
+
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
               {cartProducts.length}
             </span>
