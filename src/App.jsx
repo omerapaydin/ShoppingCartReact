@@ -6,11 +6,16 @@ import { product_list } from "./data";
 
 function App() {
   const [products, setProducts] = useState(product_list);
+  const [cartProducts, setCartProducts] = useState([]);
 
   return (
     <>
-      <Header />
-      <ProductList products={products} />
+      <Header cartProducts={cartProducts} />
+      <ProductList
+        products={products}
+        setCartProducts={setCartProducts}
+        cartProducts={cartProducts}
+      />
     </>
   );
 }

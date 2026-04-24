@@ -1,4 +1,4 @@
-export default function Header() {
+export default function Header({ cartProducts }) {
   return (
     <div id="header">
       <nav
@@ -27,7 +27,7 @@ export default function Header() {
           >
             <i className="bi bi-cart"></i>
             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-              2
+              {cartProducts.length}
             </span>
           </button>
         </div>

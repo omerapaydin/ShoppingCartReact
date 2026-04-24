@@ -1,7 +1,11 @@
 import React from "react";
 import Product from "./Product.jsx";
 
-export default function ProductList({ products }) {
+export default function ProductList({
+  products,
+  setCartProducts,
+  cartProducts,
+}) {
   return (
     <div className="container my-3">
       <div className="card">
@@ -17,7 +21,12 @@ export default function ProductList({ products }) {
               className="row row-cols-2 row-cols-md-3 row-cols-lg-4 g-4"
             >
               {products.map((p, index) => (
-                <Product key={index} productObj={p} />
+                <Product
+                  key={index}
+                  productObj={p}
+                  setCartProducts={setCartProducts}
+                  cartProducts={cartProducts}
+                />
               ))}
             </div>
           )}
